@@ -8,7 +8,24 @@
 <div id="content">
     <h2>Golf Croquet Terms</h2>
 
-    <!-- Create a table of GlossaryTerm objects here -->
+    <table class="glossary">
+        <tr>
+            <th>TERM</th>
+            <th>DEFINITION</th>
+            <th>REGULATION</th>
+        </tr>
+        <tr th:each="item : ${terms}">
+            <td>
+                <span th:text="${item.term}"></span>
+            </td>
+            <td>
+                <span th:text="${item.definition}"></span>
+            </td>
+            <td>
+                <span th:text="${item.regulation}"></span>
+            </td>
+        </tr>
+    </table>
 
 
 </div>
